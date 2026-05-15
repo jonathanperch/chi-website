@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -182,7 +184,7 @@ export default function CHIWebsite() {
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {capabilities.map(([icon, title, text], index) => (
-                <motion.div key={title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.04 }}>
+                <motion.div key={index} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.04 }}>
                   <Card className="group h-full overflow-hidden rounded-[2rem] border-white/10 bg-white/[0.055] text-white shadow-xl backdrop-blur-xl transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.075] hover:shadow-[0_0_55px_rgba(245,158,11,0.13)]">
                     <CardContent className="p-7">
                       <div className="mb-6 inline-flex rounded-2xl border border-amber-300/20 bg-amber-300/10 p-3 text-amber-200 transition group-hover:scale-105">
@@ -214,7 +216,7 @@ export default function CHIWebsite() {
             </Card>
             <div className="grid gap-5">
               {[[<BadgeCheck className="h-6 w-6" />, "GSA Schedule Proposal Submitted", "CHI has submitted its GSA Schedule proposal as part of its federal market positioning."], [<LockKeyhole className="h-6 w-6" />, "Security-Conscious Delivery", "Solutions are structured around controlled access, clean permissions, documented processes, and sensitive-file organization."], [<Layers3 className="h-6 w-6" />, "Contractor-Ready Systems", "Designed for proposal teams, contract folders, capture workflows, file libraries, and operational growth."], [<Globe2 className="h-6 w-6" />, "Federal-Market Orientation", "Built for organizations that need practical systems while preparing for or operating inside government-sector work."]].map(([icon, title, text]) => (
-                <div key={title} className="flex gap-5 rounded-[1.75rem] border border-white/10 bg-white/[0.055] p-6 backdrop-blur-xl">
+                <div key={String(title)} className="flex gap-5 rounded-[1.75rem] border border-white/10 bg-white/[0.055] p-6 backdrop-blur-xl">
                   <div className="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-amber-300/10 text-amber-200">{icon}</div>
                   <div>
                     <h3 className="text-xl font-bold">{title}</h3>
