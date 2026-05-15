@@ -42,18 +42,15 @@ function CardContent({ children, className = "" }: any) {
 function CHILogo({ compact = false }) {
   return (
     <div className="flex items-center gap-4">
-      <div className="relative grid h-14 w-14 place-items-center rounded-2xl border border-amber-300/40 bg-gradient-to-br from-amber-200/20 via-yellow-500/10 to-cyan-300/10 shadow-[0_0_45px_rgba(245,158,11,0.26)]">
-        <div className="absolute inset-1 rounded-[1rem] border border-cyan-200/20" />
-        <div className="relative h-9 w-9">
-          <div className="absolute left-1 top-1 h-7 w-7 rounded-lg border-[5px] border-amber-300 border-r-transparent shadow-[0_0_24px_rgba(251,191,36,0.35)]" />
-          <div className="absolute right-0 top-0 h-5 w-5 rotate-45 border border-amber-200/80 bg-amber-300/20" />
-          <div className="absolute bottom-0 right-1 h-4 w-4 rotate-45 border border-cyan-200/70 bg-cyan-300/10" />
-        </div>
-      </div>
+      <img
+        src="/chi-logo.jpg"
+        alt="CHI Logo"
+        className={compact ? "h-16 w-16 object-contain" : "h-14 w-14 object-contain"}
+      />
       {!compact && (
         <div>
           <p className="text-2xl font-black tracking-tight text-white">CHI</p>
-          <p className="text-xs uppercase tracking-[0.38em] text-amber-200/80">Capitol Haptics Intel</p>
+          <p className="text-xs uppercase tracking-[0.38em] text-slate-300">Capitol Haptics Intel</p>
         </div>
       )}
     </div>
@@ -96,9 +93,11 @@ export default function CHIWebsite() {
             <a href="#systems" className="hover:text-amber-200">Systems</a>
             <a href="#contact" className="hover:text-amber-200">Contact</a>
           </nav>
-          <Button className="rounded-2xl bg-amber-300 px-5 font-semibold text-slate-950 shadow-[0_0_28px_rgba(245,158,11,0.32)] hover:bg-amber-200">
-            Initiate Contact
-          </Button>
+          <a href="https://calendly.com/jperch-chi-tech" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-2xl bg-amber-300 px-5 font-semibold text-slate-950 shadow-[0_0_28px_rgba(245,158,11,0.32)] hover:bg-amber-200">
+              Contact CHI
+            </Button>
+          </a>
         </div>
       </header>
 
@@ -111,10 +110,10 @@ export default function CHIWebsite() {
                 Federal-space technology systems for the next operating era
               </div>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.95] tracking-[-0.06em] md:text-7xl lg:text-8xl">
-                Secure federal tech with a 2070-grade digital edge.
+                Secure federal tech solutions with a futuristic edge..
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                Capitol Haptics Intel, LLC operates in the federal space, building secure IT environments, automation systems, SharePoint architectures, data workflows, and document-control infrastructure for government-facing operations.
+                CHI operates in the federal space, building secure IT environments, automation systems, SharePoint architectures, data workflows, and document-control infrastructure for government-facing operations.
               </p>
               <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
                 {proofPoints.map((item) => (
@@ -258,12 +257,17 @@ export default function CHIWebsite() {
               Organize your Microsoft 365 environment, automate document workflows, and create secure data systems for federal-sector operations.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="https://calendly.com/jperch-chi-tech" target="_blank" rel="noopener noreferrer">
               <Button className="rounded-2xl bg-amber-300 px-6 py-6 text-base font-semibold text-slate-950 hover:bg-amber-200">
-                <Mail className="mr-2 h-5 w-5" /> jperch@chi-tech.net
+                <Mail className="mr-2 h-5 w-5" /> Contact
               </Button>
+            </a>
+
+            <a href="https://calendly.com/jperch-chi-tech" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="rounded-2xl border-white/20 bg-white/10 px-6 py-6 text-base text-white hover:bg-white/20">
                 Schedule Consultation <Zap className="ml-2 h-5 w-5" />
               </Button>
+            </a>
             </div>
           </div>
         </section>
